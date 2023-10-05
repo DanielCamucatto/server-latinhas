@@ -11,6 +11,4 @@ export class Demamd {
 
     @Column()
     data: Date;
-
-
 }
