@@ -10,7 +10,6 @@ import {
 import { DemandsService } from '../../services/demands.service';
 import { CreateDemandDto } from '../../dtos/create-demand.dto';
 import { UpdateDemanddto } from '../../dtos/update-demand.dto';
-import { create } from "domain";
 
 @Controller('demands')
 export class DemandsController {
