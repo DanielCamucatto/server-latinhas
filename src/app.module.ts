@@ -5,7 +5,15 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(), demandsModules],
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'sqlite', 
+      database: 'latinhas.db',
+      entities: [ __dirname + '/**/*.entity{.ts,.js}'], 
+      synchronize: true
+    }), 
+    demandsModules
+  ],
   controllers: [],
   providers: [],
 })
