@@ -7,8 +7,11 @@ export class Demand {
     id: number;
 
     @Column()
-    decription: string;
+    title: string
 
     @Column()
-    data: Date;
+    description: string;
+
+    @Column()
+    deadline: Date;
 }
