@@ -1,8 +1,8 @@
-GET  http://localhost:3001/demands/
+POST   http://localhost:3001/demands/
 Content-Type: application/json
 
 {
-  "title": "Demanda",
-  "description": "demanda editada",
+  "title": "Demanda teste 2",
+  "description": "mensagem 6",
   "deadline": "2023-12-31T03:00:00.000Z"
 }
