@@ -7,7 +7,7 @@ async function bootstrap() {
   app.enableCors({
     origin: '*', 
     credentials: false
-  })
+  });
 
   const config = new DocumentBuilder()
     .setTitle('Latinhas API')
@@ -16,8 +16,13 @@ async function bootstrap() {
     .addTag('API')
     .build(); 
 
-    const document = SwaggerModule.createDocument(app, config); 
-    SwaggerModule.setup('Swagger', app, document);
-  await app.listen('server-latinhas-production.up.railway.app');
+  const document = SwaggerModule.createDocument(app, config); 
+  SwaggerModule.setup('Swagger', app, document);
+
+  const PORT = process.env.PORT || 3001; 
+  await app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
 }
+
 bootstrap();
