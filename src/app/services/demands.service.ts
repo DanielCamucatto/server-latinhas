@@ -19,7 +19,7 @@ export class DemandsService {
             const createDemand = await this.demandsRepository.save(demandToCreate);
             return createDemand;
         } catch (e) {
-            console.error('Erro ao criar a demanda SERVIDOR', e)
+            console.error('Erro ao criar a demanda', e)
         }
 
     }
@@ -28,7 +28,7 @@ export class DemandsService {
             const allDemands = await this.demandsRepository.find();
             return allDemands;
         } catch (e) {
-            console.error('Erro ao procurar todas as demandas SERVIDOR', e)
+            console.error('Erro ao procurar todas as demandas', e)
         }
 
     }
@@ -38,7 +38,7 @@ export class DemandsService {
             const foundDemand = await this.demandsRepository.findOne({ where: { id } })
             return foundDemand;
         } catch (e) {
-            console.error('Erro ao procurar uma demanda SERVIDOR', e)
+            console.error('Erro ao procurar uma demanda', e)
         }
 
     }
@@ -57,7 +57,7 @@ export class DemandsService {
             const updateDemand = await this.demandsRepository.save(existingDemand);
             return updateDemand;
         } catch (e) {
-            console.error('Erro ao atualizar uma demanda SERVIDOR', e)
+            console.error('Erro ao atualizar uma demanda', e)
         }
 
 

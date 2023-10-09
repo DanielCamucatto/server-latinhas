@@ -3,7 +3,7 @@ import { DemandsService } from '../../services/demands.service';
 import { CreateDemandDto } from '../../dtos/create-demand.dto';
 import { UpdateDemanddto } from '../../dtos/update-demand.dto';
 
-@Controller('demands')
+@Controller('/demands')
 export class DemandsController {
     constructor(private readonly demandsService: DemandsService) { }
 
